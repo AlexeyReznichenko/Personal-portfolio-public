@@ -1,0 +1,192 @@
+@import '../../mixins.scss';
+
+.section-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1200;
+    overflow: hidden;
+    background-color: #0D0D0D;
+
+    .inner-container {
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    
+    .content {
+        @include abs-center;
+        width: 75rem;
+        text-align: center;
+    }
+
+    .watch {
+        @include abs-center;
+        height: 52rem;
+
+        @media only screen and (max-width: 850px) {
+            transform: translate(-50%, -50%) scale(.87);
+        }
+
+        .inner {
+            height: 100%;
+            position: relative;
+        }
+
+        img {
+            height: 100%;
+            position: relative;
+            z-index: 100;
+        }
+
+        .shadow {
+            @include abs-center;
+            left: 45%;
+            width: 62rem;
+            height: 62rem;
+            border-radius: 40rem;
+            filter: blur(10px);
+            background-image: url(/static/img/Landing/shadowOrange.png);
+            background-size: cover;
+        }
+
+        .arrow {
+            @include abs-center;
+            top: 50.5%;
+            left: 45.5%;
+            z-index: 200;
+            width: 20rem;
+
+            &-minutes {
+                transform: translate(-50%, -50%) rotate(-31deg);
+            }
+
+            &-hours {
+                transform: translate(-50%, -50%) rotate(238deg);
+            }
+        }
+    }
+
+    .info {
+        @include abs-center;
+        top: 73%;
+        width: 75rem;
+        text-align: center;
+        z-index: 100;
+
+        @media only screen and (max-width: 850px) {
+            width: 325px;
+            top: 70%;
+        }
+
+        .big-description {
+            font-family: Enigma;
+            font-weight: 400;
+            font-size: 4.1rem;
+            line-height: 1.05;
+            width: 100%;
+            display: block;
+            margin-bottom: 3.8rem;
+            margin-top: 4.8rem;
+
+            @media only screen and (max-width: 850px) {
+                font-size: 24px;
+                line-height: 1.1;
+                margin-bottom: 20px;
+            }
+        }
+
+        .description {
+            line-height: 1.6;
+            width: 66rem;
+            margin: 0 auto;
+
+            @media only screen and (max-width: 850px) {
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .stick {
+        position: absolute;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .orange-stick {
+
+        &-1 {
+            top: -57rem;
+            left: 23.5rem;
+            height: 300rem;
+            transform: rotate(-50deg);
+            z-index: 100;
+
+            @media only screen and (max-width: 850px) {
+                height: 250rem;
+                top: auto;
+                bottom: -110rem;
+                left: auto;
+                right: -14rem;
+                transform: rotate(38deg);
+
+                @media only screen and (max-height: 750px) {
+                    bottom: -115rem;
+                }
+            }
+        }
+
+        &-2 {
+            top: -23rem;
+            right: 7.8rem;
+            height: 145rem;
+            transform: rotate(-140deg);
+            z-index: 100;
+
+            @media only screen and (max-width: 850px) {
+                top: -48rem;
+                right: auto;
+                left: -14rem;
+                transform: rotate(28deg);
+            }
+        }
+    }
+
+    .green-stick {
+
+        &-1 {
+            top: 7.1rem;
+            left: 10rem;
+            height: 120rem;
+            transform: rotate(-33deg);
+            z-index: 10;
+        }
+
+        &-2 {
+            bottom: -20rem;
+            left: 21rem;
+            height: 140rem;
+            transform: rotate(23deg);
+            filter: blur(4px);
+        }
+
+        &-3 {
+            top: -8rem;
+            right: -2rem;
+            height: 140rem;
+            transform: rotate(23deg);
+            filter: blur(4px);
+
+            @media only screen and (max-width: 850px) {
+                height: 160rem;
+                top: -85rem;
+                right: -7rem;
+                transform: rotate(-34deg);
+                filter: none;
+            }
+        }
+    }
+}

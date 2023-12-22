@@ -1,0 +1,112 @@
+@import '../mixins.scss';
+
+.page-faq {
+    position: relative;
+    padding-top: 19rem;
+    padding-bottom: 4rem;
+
+    @media only screen and (max-width: 850px) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    .inner-container {
+        @include width-restriction;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .questions {
+        width: 100%;
+    }
+
+    .stick {
+        position: fixed;
+        opacity: .8;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .orange-stick {
+
+        &-1 {
+            bottom: -88rem;
+            left: 24rem;
+            height: 145rem;
+            transform: scaleX(-1) rotate(43deg);
+
+            @media only screen and (max-width: 850px) {
+                height: 190rem;
+                bottom: -105rem;
+            }
+        }
+
+        &-2 {
+            bottom: -118rem;
+            left: 24rem;
+            height: 145rem;
+            transform: scaleX(-1) rotate(43deg);
+        }
+
+        &-3 {
+            top: -10rem;
+            left: 8.3rem;
+            height: 37rem;
+            transform: rotate(38deg);
+
+            @media only screen and (max-width: 850px) {
+                height: 75rem;
+                top: -39rem;
+                left: 4rem;
+                transform: rotate(30deg);
+            }
+        }
+
+        &-4 {
+            bottom: -31rem;
+            right: -18rem;
+            height: 145rem;
+            transform: rotate(31deg);
+            z-index: 10;
+        }
+
+        &-5 {
+            bottom: -24rem;
+            right: 11rem;
+            height: 59rem;
+            transform: rotate(60deg);
+        }
+    }
+
+    .green-stick {
+
+        &-1 {
+            bottom: -41rem;
+            left: 3.8rem;
+            height: 102rem;
+            transform: rotate(-65deg);
+            z-index: 100;
+            filter: blur(4px);
+
+            @media only screen and (max-width: 850px) {
+                transform: rotate(-70deg);
+            }
+        }
+
+        &-2 {
+            top: -23rem;
+            right: 10.5rem;
+            height: 59rem;
+            transform: scaleX(-1) rotate(48deg);
+            filter: blur(4px);
+
+            @media only screen and (max-width: 850px) {
+                height: 65rem;
+                top: -34rem;
+                right: 11rem;
+            }
+        }
+    }
+  }

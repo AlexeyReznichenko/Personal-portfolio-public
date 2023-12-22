@@ -1,0 +1,243 @@
+@import '../../mixins.scss';
+
+.section-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1400;
+    overflow: hidden;
+    background-color: #0D0D0D;
+    border-radius: 67px 67px 0px 0px;
+    border: 1px solid #272727;
+
+    @media only screen and (max-width: 850px) {
+        border-radius: 35px 35px 0 0;
+    }
+
+    .inner-container {
+        @include width-restriction;
+        height: 100%;
+        position: relative;
+    }
+    
+    .content {
+        position: absolute;
+        top: 55%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+
+        @media only screen and (max-width: 1650px) {
+            top: 50%;
+
+            @media only screen and (max-height: 700px) {
+                top: 54%;
+            }
+        }
+
+        .big-description {
+            font-family: Enigma;
+            font-weight: 400;
+            font-size: 4.1rem;
+            line-height: 1.05;
+            margin-bottom: 3.4rem;
+            width: 45rem;
+            display: block;
+
+            @media only screen and (max-width: 850px) {
+                width: 320px;
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .word {
+            display: inline-block;
+            padding-bottom: 1.3rem;
+            border-bottom: 1px solid var(--color-white);
+            margin-bottom: 10vh;
+
+            @media only screen and (max-width: 850px) {
+                font-size: 18px;
+                padding-bottom: 15px;
+
+                @media only screen and (max-height: 750px) {
+                    margin-bottom: 8vh;
+                }
+            }
+        }
+
+        .info-blocks {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 9vh;
+            position: relative;
+
+            @media only screen and (max-width: 850px) {
+                margin-bottom: 8vh;
+            }
+
+            .info-block,
+            .info-block-1,
+            .info-block-2 {
+
+                &-2 {
+
+                    @media only screen and (max-width: 850px) {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+
+                .subtitle {
+                    font-family: Enigma;
+                    font-weight: 400;
+                    font-size: 2.1rem;
+                    line-height: 1.05;
+                    margin-bottom: 2.6rem;
+                    width: 40rem;
+                    display: block;
+
+                    @media only screen and (max-width: 850px) {
+                        font-size: 24px;
+                        width: 280px !important;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .description {
+                    line-height: 1.6;
+                    width: 35rem;
+
+                    @media only screen and (max-width: 850px) {
+                        font-size: 18px;
+                        width: 300px;
+                    }
+                }
+
+                &:not(:last-of-type) {
+                    margin-right: 11rem;
+                }
+            }
+        }
+
+        .timeline {
+            display: flex;
+            align-items: center;
+
+            @media only screen and (max-width: 850px) {
+                width: 220vw;
+            }
+
+            .block,
+            .block-1,
+            .block-2 {
+                width: 2.2rem;
+                height: 5.2rem;
+                border-radius: 3px;
+                padding: .2rem;
+                border: 1px solid var(--color-orange);
+
+                @media only screen and (max-width: 850px) {
+                    width: 26px;
+                    height: 62px;
+                }
+
+                .inner {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 3px;
+                    background-color: var(--color-orange-2);
+                }
+            }
+            
+            .block-3 {
+                width: 2.4rem;
+                height: 2.4rem;
+                border-radius: 20rem;
+
+                @media only screen and (max-width: 850px) {
+                    width: 28px;
+                    height: 28px;
+                }
+
+                .inner {
+                    border-radius: 20rem;
+                }
+            }
+
+            .line {
+                background-color: #232323;
+                height: 2px;
+                width: 100%;
+
+                .inner {
+                    height: 100%;
+                    background-color: var(--color-orange);
+                }
+
+                &-1 {
+                    width: 45%;
+
+                    @media only screen and (max-width: 850px) {
+                        width: 50%;
+                    }
+                }
+
+                &-2 {
+                    width: 55%;
+
+                    @media only screen and (max-width: 850px) {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    .stick {
+        position: absolute;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .orange-stick {
+
+        &-1 {
+            top: -56rem;
+            right: 45rem;
+            height: 145rem;
+            transform: rotate(-58deg);
+
+            @media only screen and (max-width: 850px) {
+                height: 115rem;
+                top: auto;
+                bottom: -34rem;
+                right: 4rem;
+                transform: rotate(22deg);
+            }
+        }
+    }
+
+    .green-stick {
+
+        &-1 {
+            top: -20rem;
+            right: 0;
+            height: 141rem;
+            transform: rotate(-32deg);
+            z-index: 100;
+
+            @media only screen and (max-width: 850px) {
+                height: 130rem;
+                top: auto;
+                bottom: -43rem;
+                right: -16rem;
+                transform: rotate(43deg);
+            }
+        }
+    }
+}
