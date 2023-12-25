@@ -1,10 +1,7 @@
 # My Portfolio website
 
 ## Description
-Explore the portfolio of Oleksii Reznichenko, a passionate front-end web developer 
-with 3 years of experience. Specializing in React, Vue.js, Next.js, HTML, CSS, JavaScript and TypeScript, 
-I craft high-performance websites with a focus on user-friendliness and 
-contribute to the development of dynamic and responsive web applications.
+Portfolio website of Oleksii Reznichenko, a passionate front-end web developer.
 
 ## Pages of the website
 #### Main
