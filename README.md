@@ -24,3 +24,10 @@ TypeScript code is structurized and have comments.
 
 ## Application assests: images, svgs and fonts
 Images are located in public/static/img. All images have been compressed through https://tinypng.com compressor. All images that are over 50 kb are loaded through next/Image tag.
+
+Svgs are located in public/static/svg.
+
+Fonts are located in public/static/fonts. All fonts have been converted to .woff format, because it has smaller file size.
+
+
+
