@@ -1,4 +1,4 @@
-import classes from '@/styles/componentsStyles/footer.module.scss';
+import classes from '@/styles/componentsStyles/App/footer.module.scss';
 import Link from 'next/link';
 
 
@@ -34,26 +34,23 @@ export default function Footer() {
                                     <span className={classes.subtitle}>My expertise</span>
                                 </li>
                                 <li className={classes.item}>
-                                    <a href='https://drive.google.com/file/d/1G4tUGzjNWNEdUP4cZXD4zO2kawuS5SzA/view?usp=sharing' target='_blank' className={classes.link}>CV | Resume</a>
+                                    <a href='https://drive.google.com/file/d/1X3XHCpJ2lOlGTHEvFdZYJM1leNuKa6Ic/view?usp=sharing' target='_blank' className={classes.link}>CV | Resume</a>
                                 </li>
                                 <li className={classes.item}>
                                     <a href='https://github.com/AlexeyReznichenko' target='_blank' className={classes.link}>GitHub</a>
                                 </li>
                             </ul>
-                            <ul className={classes.list + ' desktop'}>
+                            <ul className={`${classes.list} desktop`}>
                                 <li className={classes.item}>
                                     <span className={classes.subtitle}>© 2023 P2H Inc, All rights reserved.</span>
                                 </li>
-                                {/* <li className={classes.item}>
-                                    <Link href='/faq' className={classes.link}>FAQ</Link>
-                                </li> */}
                                 <li className={classes.item}>
                                     <Link href='/tos' className={classes.link}>Terms of Service</Link>
                                 </li>
                             </ul>
                         </nav>
                     </div>
-                    <ul className={classes.list + ' mobile'}>
+                    <ul className={`${classes.list} mobile`}>
                         <li className={classes.item}>
                             <span className={classes.subtitle}>© 2023 P2H Inc, All rights reserved.</span>
                         </li>

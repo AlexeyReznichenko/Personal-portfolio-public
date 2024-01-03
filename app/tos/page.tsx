@@ -49,31 +49,27 @@ const infoBlocks: InfoBlock[] = [
 ];
 
 export default function Tos() {
-    const goBack = () => {
-      window.history.back();
-    };
 
     return (
         <div className={classes['page-tos']}>
             <Header />
             <div className={classes['inner-container']}>
-                <h1 className={classes.title}>Terms of service</h1>
-                <div className={classes['info-blocks']}>
-                    {infoBlocks.map((el, index) => {
-                        return (
-                            <div className={classes['info-block']}>
-                                <span className={classes.subtitle}>{index + 1}. {el.title}</span>
-                                <p className={classes.description}>{el.description}</p>
-                            </div>
-                        )
-                    })}
+                <div className={classes.center}>
+                    <h1 className={classes.title}>Terms of service</h1>
+                    <div className={classes['info-blocks']}>
+                        {infoBlocks.map((el, index) => {
+                            return (
+                                <div className={classes['info-block']}>
+                                    <span className={classes.subtitle}>{index + 1}. {el.title}</span>
+                                    <p className={classes.description}>{el.description}</p>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    <Link href='/' className={`${classes.button} button-yellow`}>
+                        <div className={`${classes.inner} inner`}>Back</div>
+                    </Link>
                 </div>
-                <Link href='/' className={classes.button + ' button-yellow'}>
-                    <div className={classes.inner + ' inner'}>Back</div>
-                </Link>
-                {/* <button onClick={goBack} className={classes.button + ' button-yellow'}>
-                    <div className={classes.inner + ' inner'}>Back</div>
-                </button> */}
             </div>
             <div className={`${classes['orange-stick-3']} ${classes.stick}`}>
                 <img src="/static/img/Landing/orangeStick.png" alt="" />

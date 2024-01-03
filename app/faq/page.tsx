@@ -85,27 +85,27 @@ export default function Faq() {
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // TOGGLE EVENT FOR ANSWERS FOR QUESTIONS
     const toggleEvent = (event: React.MouseEvent): void => {
-        const target = event.target as HTMLElement;
-        const parent = target?.closest(`.question`);
-        const toggleContainer = parent?.querySelector('.toggle-container') as HTMLElement;
+        const TARGET = event.target as HTMLElement;
+        const PARENT = TARGET?.closest(`.question`);
+        const TOGGLE_CONTAINER = PARENT?.querySelector('.toggle-container') as HTMLElement;
 
-        if (parent && toggleContainer && !parent.classList.contains('animating')) {
-            const arrow = parent?.querySelector(`.arrow`);
-            const headerLine = parent.querySelector(`.header-line`)!;
+        if (PARENT && TOGGLE_CONTAINER && !PARENT.classList.contains('animating')) {
+            const ARROW = PARENT?.querySelector(`.arrow`);
+            const HEADER_LINE = PARENT.querySelector(`.header-line`)!;
 
             let timeoutTime = 700;
 
-            slideToggle(toggleContainer);
+            slideToggle(TOGGLE_CONTAINER);
 
-            if (arrow) {
-                arrow.classList.toggle(`arrow-active`);
+            if (ARROW) {
+                ARROW.classList.toggle(`arrow-active`);
             }
 
-            headerLine.classList.toggle('padding');
-            parent.classList.add('animating');
+            HEADER_LINE.classList.toggle('padding');
+            PARENT.classList.add('animating');
 
             setTimeout(() => {
-                parent.classList.remove('animating');
+                PARENT.classList.remove('animating');
             }, timeoutTime);
         }
     };

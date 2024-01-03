@@ -1,37 +1,50 @@
-import classes from '@/styles/componentsStyles/preloader.module.scss';
+import { baseActions, selectIsPreloaderFinished } from '@/store/baseSlice';
+import classes from '@/styles/componentsStyles/App/preloader.module.scss';
 import { gsap } from 'gsap';
 import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 export default function Preloader() {
+    const dispatch = useDispatch();
     const preloaderTimeline = gsap.timeline({});
+    const isPreloaderFinished = useSelector(selectIsPreloaderFinished);
 
     // RELOADER ANIMATION
     const initAnimation = (): void => {
-        const vh = window.innerHeight / 100;
-        const vw = window.innerWidth / 100;
+        const VH = window.innerHeight / 100;
+        const VW = window.innerWidth / 100;
+
+        let animationDuration = 1.8;
+
+        if (isPreloaderFinished) {
+            animationDuration = .9;
+        }
     
         preloaderTimeline
-        .to(`.${classes['line-left']} .${classes.inner}`, {duration: 2, y: 100 * vh - 155}, 0)
-        .to(`.${classes['line-right']} .${classes.inner}`, {duration: 2, y: -(100 * vh - 155)}, 0)
-        .to(`.${classes['logo-animating']}`, {duration: 2, width: '100%'}, 0)
-        .to(`.${classes.preloader}`, {duration: .5, delay: 2.4, autoAlpha: 0}, 0)
-        .to("html", { duration: 0, overflowY: "visible", delay: 2.4 }, 0);
+        .to(`.${classes['line-left']} .${classes.inner}`, {duration: animationDuration, y: 100 * VH - 155}, 0)
+        .to(`.${classes['line-right']} .${classes.inner}`, {duration: animationDuration, y: -(100 * VH - 155)}, 0)
+        .to(`.${classes['logo-animating']}`, {duration: animationDuration, width: '100%'}, 0)
+        .to(`.${classes.preloader}`, {duration: .5, delay: animationDuration + .3, autoAlpha: 0}, 0)
+        .to("html", { duration: 0, overflowY: "visible", delay: animationDuration + .3 }, 0);
     };
 
     useEffect(() => {
-        const html = document.querySelector('html')!;
-        html.style.overflowY = 'hidden';
+        const HTML = document.querySelector('html')!;
+        HTML.style.overflowY = 'hidden';
         initAnimation();
 
         setTimeout(() => {
-            html.style.overflowY = 'hidden';
+            HTML.style.overflowY = 'hidden';
         }, 100);
 
         setTimeout(() => {
             window.scrollTo(0, 0);
         }, 200);
-        // }, 2200);
+
+        setTimeout(() => {
+            dispatch(baseActions.isPreloaderFinishedToTrue());
+        }, 2700);
     }, []);
 
 

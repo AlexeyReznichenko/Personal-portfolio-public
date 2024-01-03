@@ -1,19 +1,9 @@
-import { isTouchDevice } from '@/store';
+import ButtonProject from '@/components/Reusable/Landing/ButtonProject';
+import ProjectComp from '@/components/Reusable/Landing/Project';
 import classes from '@/styles/componentsStyles/Landing/section4.module.scss';
-import Image from 'next/image';
+import Project from '@/types/project';
 
-interface Project {
-    id: number | string;
-    name: string;
-    cover: string;
-    link: string;
-    description: string;
-    technologies: string;
-    staff: string;
-    timeSpent: string;
-}
-
-const projects: Project[] = [
+const PROJECTS: Project[] = [
     {
         id: 'tonmainers',
         name: 'Ton Mainers',
@@ -143,87 +133,68 @@ const projects: Project[] = [
 
 export default function Section4() {
 
-    // SCROLL TO SELECTED PROJECT
-    const scrollToProject = (index: number): void => {
-        const pinSpacer = document.querySelector(`.pin-spacer`) as HTMLDivElement;
-
-        if (!pinSpacer) return;
-
-        if (window.innerWidth < 850) {
-            scrollTo(0, 4060 + (535 * index));
-        }
-
-        if (window.innerWidth > 850 && isTouchDevice()) {
-            scrollTo(0, 2400 + (400 * index));
-        }
-
-        if (window.innerWidth > 850 && !isTouchDevice()) {
-            scrollTo(0, pinSpacer.clientHeight * (.377 + (.05 * index)));
-        }
-    };
-
     return (
-        <section className={classes['section-4'] + ' section'}>
+        <section className={`${classes['section-4']} section`}>
             <div className={classes['inner-container']}>
                 <div className={classes.projects}>
                     <div className={classes['flex-container']}>
                         <div className={classes['index-container']}>
-                            {projects.map((el, index, arr) => {
+                            {PROJECTS.map((_, index, arr) => {
                                 return (
-                                    <span className={`${classes.index} ${index + 1 !== arr.length ? classes['index-to-top'] : ''}  ${index !== 0 ? classes['index-from-bottom'] : ''}`}>{index + 1}</span>
+                                    <span 
+                                     className={`
+                                      ${classes.index} 
+                                      ${index + 1 !== arr.length ? classes['index-to-top'] : ''} 
+                                      ${index !== 0 ? classes['index-from-bottom'] : ''}
+                                    `}>
+                                        {index + 1}
+                                    </span>
                                 )
                             })}
                         </div>
                         <div className={classes['title-container']}>
                             <div className={classes.inner}>
-                                {projects.map((el, index, arr) => {
+                                {PROJECTS.map((el, index, arr) => {
                                     return (
-                                        <h2 className={`${classes.title} ${index + 1 !== arr.length ? classes['title-to-top'] : ''}  ${index !== 0 ? classes['title-from-bottom'] : ''}`}>{el.name}</h2>
+                                        <h2 
+                                         className={`
+                                          ${classes.title} 
+                                          ${index + 1 !== arr.length ? classes['title-to-top'] : ''}  
+                                          ${index !== 0 ? classes['title-from-bottom'] : ''}
+                                        `}>
+                                            {el.name}
+                                        </h2>
                                     )
                                 })}
                             </div>
                         </div>
-                        <div className={classes.lines + ' desktop'}>
-                            {projects.map((el, index, arr) => {
+                        <div className={`${classes.lines} desktop`}>
+                            {PROJECTS.map((el, index, arr) => {
                                 return (
-                                    <button onClick={() => scrollToProject(index)} className={`${classes['button-project']} ${index + 1 !== arr.length ? classes['button-project-to-top'] : ''}`}></button>
+                                    <ButtonProject 
+                                        key={el.id}
+                                        index={index}
+                                        projectsAmount={arr.length}
+                                    />
                                 )
                             })}
                         </div>
                     </div>
-                    {projects.map((el, index, arr) => {
-
+                    {PROJECTS.map((el, index, arr) => {
                         return (
-
-                            <div className={`${classes.project} ${index + 1 !== arr.length ? classes['project-to-top'] : ''}  ${index !== 0 ? classes['project-from-bottom'] : ''}`}>
-                                <a href={el.link} target='_blank' className={classes.cover}>
-                                    <Image quality={90} src={`/static/img/Projects/${el.cover}.jpg`} alt='' fill />
-                                    <div className={classes['hover-cover'] + ' desktop'}>
-                                        <span>Open Website</span>
-                                    </div>
-                                </a>
-                                <div className={classes.info}>
-                                    <div className={classes.left}>
-                                        <p className={classes.description}>
-                                            {el.description}
-                                        </p>
-                                        <div className={classes.block}>
-                                            <span className={classes.technologies}>{el.technologies}</span>
-                                            <span className={classes.staff}>{el.staff}</span>
-                                        </div>
-                                    </div>
-                                    <div className={classes.timeline}>
-                                        <div>
-                                            <span className={classes.subtitle}>Spent on the project</span>
-                                            <span className={classes.time}>{el.timeSpent}</span>
-                                        </div>
-                                        <img src="/static/svg/Landing/clock.svg" alt="" className={classes.clock} />
-                                    </div>
-                                    <a href={el.link} target='_blank' className={classes.button + ' mobile'}>
-                                        <div className={classes.inner}>Visit website</div>
-                                    </a>
-                                </div>
-                            </div>
+                            <ProjectComp 
+                                key={el.id}
+                                id={el.id}
+                                name={el.name}
+                                cover={el.cover}
+                                link={el.link}
+                                description={el.description}
+                                technologies={el.technologies}
+                                staff={el.staff}
+                                timeSpent={el.timeSpent}
+                                index={index}
+                                projectsAmount={arr.length}
+                            />
                         )
                     })}
                 </div>

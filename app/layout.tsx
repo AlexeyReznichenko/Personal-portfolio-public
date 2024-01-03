@@ -13,27 +13,6 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  // // IF TOUCHPAD DEVICE'S HEIGHT CHANGES - CHANGE BASE 100VH HEIGHT
-  // const appHeight = (): void => {
-  //   const doc = document.documentElement;
-  //   doc.style.setProperty('--app-height', `${window.innerHeight}px`);
-  // };
-
-  // // RESIZE EVENT HANDLER
-  // const handleResize = (): void => {
-  //   appHeight();
-  // };
-
-  // useEffect(() => {
-  //   // ADD WINDOW EVENT LISTENER
-  //   window.addEventListener('resize', handleResize);
-
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //   };
-  // }, []);
-
-
   return (
     <html lang="en">
       <body className='page'>

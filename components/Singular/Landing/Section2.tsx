@@ -3,7 +3,7 @@ import classes from '@/styles/componentsStyles/Landing/section2.module.scss';
 export default function Section2() {
 
     return (
-        <section className={classes['section-2'] + ' section'}>
+        <section className={`${classes['section-2']} section`}>
             <div className={classes['inner-container']}>
                 <div className={classes.content}>
                     <strong className={classes['big-description']}>

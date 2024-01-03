@@ -14,12 +14,12 @@ export default function Question({ question, answer, answerList, answerListSkill
 
 
     return (
-        <div className={classes.question + ' question'}>
-            <div className={classes['header-line'] + ' header-line'}>
+        <div className={`${classes.question} question`}>
+            <div className={`${classes['header-line']} header-line`}>
                 <h3 className={classes.title}>{question}</h3>
-                <img src="/static/svg/arrowFaq.svg" alt="" className={classes.arrow + ' arrow'} />
+                <img src="/static/svg/arrowFaq.svg" alt="" className={`${classes.arrow} arrow`} />
             </div>
-            <div className={classes['toggle-container'] + ' toggle-container'}>
+            <div className={`${classes['toggle-container']} toggle-container`}>
                 {answer && <p className={classes.answer}>{answer}</p>}
                 {answerListSkills && answerListYears && <div className={`${classes.answer} ${classes['flex-container']}`}>
                     <ul className={`${classes.list} ${classes.skills}`}>

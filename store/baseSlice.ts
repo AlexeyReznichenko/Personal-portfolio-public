@@ -11,6 +11,7 @@ export interface BaseState {
   isNavigationLinkInvictaClicked: boolean;
   isNavigationLinkTonmainersClicked: boolean;
   isNavigationLinkEarngamesClicked: boolean;
+  isPreloaderFinished: boolean;
 }
 
 const initialBaseState: BaseState = {
@@ -22,6 +23,7 @@ const initialBaseState: BaseState = {
   isNavigationLinkInvictaClicked: false,
   isNavigationLinkTonmainersClicked: false,
   isNavigationLinkEarngamesClicked: false,
+  isPreloaderFinished: false,
 };
 
 const baseSlice = createSlice({
@@ -33,6 +35,9 @@ const baseSlice = createSlice({
         },
         isMobileToFalse(state) {
           state.isMobile = false;
+        },
+        isPreloaderFinishedToTrue(state) {
+          state.isPreloaderFinished = true;
         },
         toggleMobileNavOpenedIndicator(state): void {
             state.mobileNavOpenedIndicator = !state.mobileNavOpenedIndicator;
@@ -62,6 +67,7 @@ const baseSlice = createSlice({
 export const baseActions = baseSlice.actions;
 
 export const selectIsMobile = (state: RootState) => state.base.isMobile;
+export const selectIsPreloaderFinished = (state: RootState) => state.base.isPreloaderFinished;
 export const selectMobileNavOpenedIndicator = (state: RootState) => state.base.mobileNavOpenedIndicator;
 export const selectIsNavigationLinkPortfolioClicked = (state: RootState) => state.base.isNavigationLinkPortfolioClicked;
 export const selectIsNavigationLinkAboutClicked = (state: RootState) => state.base.isNavigationLinkAboutClicked;

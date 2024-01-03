@@ -15,7 +15,7 @@ export default function Section1() {
     }, []);
 
     return (
-        <section className={classes['section-1'] + ' section'}>
+        <section className={`${classes['section-1']} section`}>
             <div className={classes['inner-container']}>
                 <div className={classes.content}>
                     <div className={classes.stands}>
@@ -24,7 +24,7 @@ export default function Section1() {
                         </div>
                     </div>
                     <div className={classes.dollar}>
-                        <Image quality={90} src="/static/img/Landing/Section1/dollar.png" alt="" fill />
+                        {isMounted && !isMobile && <Image quality={90} src="/static/img/Landing/Section1/dollar.png" alt="" fill />}
                     </div>
                     <div className={classes.info}>
                         <h1 className={classes.title}>
@@ -34,11 +34,11 @@ export default function Section1() {
                             <span className={classes.white}> deve- </span> 
                             <span className={classes.white}> lo<span className={classes.font}>per</span> </span> 
                         </h1>
-                        <p className={classes.description + ' mobile'}>
+                        <p className={`${classes.description} mobile`}>
                             Passionate front-end developer with 3 years of experience, dedicated to crafting websites that prioritize speed and user-friendliness.
                         </p>
                     </div>
-                    <p className={classes.description + ' desktop'}>
+                    <p className={`${classes.description} desktop`}>
                         Passionate front-end developer with 3 years of experience, dedicated to crafting websites that prioritize speed and user-friendliness.
                     </p>
                 </div>
@@ -64,7 +64,7 @@ export default function Section1() {
             <div className={`${classes['green-stick-2']} ${classes.stick}`}>
                 <img src="/static/img/Landing/greenStick.png" alt="" />
             </div>
-            <div className={classes['shadow-bottom']}></div>
+            {/* <div className={classes['shadow-bottom']}></div> */}
         </section>
     )
 }

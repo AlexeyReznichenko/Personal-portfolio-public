@@ -3,12 +3,12 @@ import classes from '@/styles/componentsStyles/Landing/section3.module.scss';
 export default function Section3() {
 
     return (
-        <section className={classes['section-3'] + ' section'}>
+        <section className={`${classes['section-3']} section`}>
             <div className={classes['inner-container']}>
                 <div className={classes.watch}>
                     <div className={classes.inner}>
                         <img src="/static/img/Landing/watch.png" alt="" />
-                        <div className={classes.shadow}></div>
+                        {/* <div className={classes.shadow}></div> */}
                         <img src="/static/svg/Landing/watchArrow.svg" alt="" className={`${classes.arrow} ${classes['arrow-minutes']}`} />
                         <img src="/static/svg/Landing/watchArrow.svg" alt="" className={`${classes.arrow} ${classes['arrow-hours']}`} />
                     </div>

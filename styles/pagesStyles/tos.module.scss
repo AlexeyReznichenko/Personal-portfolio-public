@@ -14,7 +14,12 @@
         @include width-restriction;
         position: relative;
         z-index: 1000;
-        text-align: center;
+        text-align: justify;
+    }
+
+    .center {
+        width: 85rem;
+        margin: 0 auto;
     }
 
     .title {
@@ -35,8 +40,6 @@
     }
 
     .info-blocks {
-        width: 85rem;
-        margin: 0 auto;
         margin-bottom: 4.2rem;
 
         @media only screen and (max-width: 850px) {
