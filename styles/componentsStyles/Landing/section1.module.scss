@@ -60,7 +60,6 @@
         left: 51%;
         width: calc(37rem * .97);
         height: calc(61rem * .97);
-        // z-index: 200;
         z-index: 50;
         opacity: .4;
 
@@ -70,7 +69,6 @@
             transform: translateX(-50%);
             width: calc(37rem * .9);
             height: calc(61rem * .9);
-            // opacity: .9;
         }
     }
 
@@ -81,7 +79,6 @@
         z-index: 100;
 
         @media only screen and (max-width: 850px) {
-            // top: 39%;
             top: 44%;
             width: 270px;
         }
@@ -121,11 +118,6 @@
             &:first-of-type {
                 display: block;
             }
-        }
-
-        .font {
-            // font-family: KylieBoga;
-            // text-transform: lowercase;
         }
     }
 

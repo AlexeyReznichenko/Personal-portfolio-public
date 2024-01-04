@@ -1,6 +1,5 @@
 import classes from '@/styles/componentsStyles/Landing/project.module.scss';
 import Image from 'next/image';
-import { useState } from 'react';
 
 interface Props {
     id: number | string;

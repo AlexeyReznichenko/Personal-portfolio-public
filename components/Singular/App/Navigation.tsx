@@ -146,58 +146,6 @@ export default function Navigation({ scrollToSection }: Props) {
                     </ul>
                 </div>
             </div>
-            {/* 
-            <ul className={classes.list}>
-                <li className={classes.item}>
-                    <span className={classes.subtitle}>Navigation</span>
-                </li>
-                <li className={classes.item}>
-                    <button onClick={scrollToPortfolioSection} className={classes.link}>Portfolio</button>
-                </li>
-                <li className={classes.item}>
-                    <button onClick={scrollToAboutSection} className={classes.link}>About me</button>
-                </li>
-                <li className={classes.item}>
-                    <Link href='/faq' className={classes.link}>FAQ</Link>
-                </li>
-            </ul>
-            <ul className={classes.list}>
-                <li className={classes.item}>
-                    <span className={classes.subtitle}>Contacts</span>
-                </li>
-                <li className={classes.item}>
-                    <a href='https://www.linkedin.com/in/oleksiireznichenko' target='_blank' className={classes.link}>LinkedIn</a>
-                </li>
-                <li className={classes.item}>
-                    <a href='https://drive.google.com/file/d/1X3XHCpJ2lOlGTHEvFdZYJM1leNuKa6Ic/view?usp=sharing' target='_blank' className={classes.link}>CV | Resume</a>
-                </li>
-                <li className={classes.item}>
-                    <a href='https://github.com/AlexeyReznichenko' target='_blank' className={classes.link}>GitHub</a>
-                </li>
-            </ul>
-            <ul className={classes.list}>
-                <li className={classes.item}>
-                    <span className={classes.subtitle}>Stores</span>
-                </li>
-                <li className={classes.item}>
-                    <button onClick={scrollToQuickSmsSection} className={classes.link}>QuickSms</button>
-                </li>
-                <li className={classes.item}>
-                    <button onClick={scrollToInvictaSection} className={classes.link}>Invicta</button>
-                </li>
-            </ul>
-            <ul className={classes.list}>
-                <li className={classes.item}>
-                    <span className={classes.subtitle}>Best animations</span>
-                </li>
-                <li className={classes.item}>
-                    <button onClick={scrollToPortfolioSection} className={classes.link}>TonMainers</button>
-                </li>
-                <li className={classes.item}>
-                    <button onClick={scrollToEarngamesSection} className={classes.link}>EarnGames</button>
-                </li>
-            </ul> 
-            */}
         </nav>
     )
 }

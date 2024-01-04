@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "./index";
-import { HYDRATE } from "next-redux-wrapper";
 
 export interface BaseState {
   isMobile: boolean;

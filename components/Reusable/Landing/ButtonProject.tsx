@@ -1,6 +1,5 @@
 import { isTouchDevice } from '@/store';
 import classes from '@/styles/componentsStyles/Landing/buttonProject.module.scss';
-import Image from 'next/image';
 
 interface Props {
     index: number;

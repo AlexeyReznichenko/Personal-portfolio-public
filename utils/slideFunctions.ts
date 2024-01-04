@@ -1,5 +1,4 @@
 // SLIDE UP FUNCTION
-// export const slideUp = ({target, durationDynamic}: SlideFunctionParams): void => {
 export const slideUp = (target: HTMLElement, durationDynamic?: number): void => {
     const duration = durationDynamic || 500;
 
@@ -29,7 +28,6 @@ export const slideUp = (target: HTMLElement, durationDynamic?: number): void => 
 };
 
 // SLIDE DOWN FUNCTION
-// export const slideDown = ({target, durationDynamic}: SlideFunctionParams): void => {
 export const slideDown = (target: HTMLElement, durationDynamic?: number): void => {
     const duration = durationDynamic || 500;
 

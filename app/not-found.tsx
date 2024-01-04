@@ -4,10 +4,12 @@ import Header from '@/components/Singular/App/Header';
 import classes from '@/styles/pagesStyles/error.module.scss';
 
 export default function NotFound() {
-    const goBack = () => {
+
+    // GO TO PREVIOUS PAGE
+    const goBack = (): void => {
       window.history.back();
     };
-    
+
     return (
         <div className={classes['page-error']}>
             <Header />

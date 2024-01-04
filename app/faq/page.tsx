@@ -14,11 +14,12 @@ interface Question {
     answerListYears?: string[];
 }
 
-const questions: Question[] = [
+const QUESTIONS: Question[] = [
     {
         id: 1,
         question: `What is your experience as a Frontend Web Developer?`,
-        answer: `I have 3 years of experience as a Frontend Web Developer. During this time, I've focused on making websites faster and more user-friendly, specializing in adding animations and 3D features.`
+        answer: `I have 3 years of experience as a Frontend Web Developer. During this time, I've focused 
+        on making websites faster and more user-friendly, specializing in adding animations and 3D features.`
     },
     {
         id: 2,
@@ -51,22 +52,27 @@ const questions: Question[] = [
     {
         id: 3,
         question: `What is your current position and role?`,
-        answer: `I am currently a Frontend Web Developer at Heavens.pro, where I have been working since April 2021. I've successfully delivered over 10 projects, ranging from basic landing pages to complex online shops.`
+        answer: `I am currently a Frontend Web Developer at Heavens.pro, where I have been working since 
+        April 2021. I've successfully delivered over 10 projects, ranging from basic landing pages to complex 
+        online shops.`
     },
     {
         id: 4,
         question: `What tools and technologies do you use in your current role?`,
-        answer: `In my current role, I use Vue.js, React, and Next.js as core tools, combined with HTML, SCSS, and TypeScript for effective development. Git is used for version control.`
+        answer: `In my current role, I use Vue.js, React, and Next.js as core tools, combined with HTML, SCSS, 
+        and TypeScript for effective development. Git is used for version control.`
     },
     {
         id: 5,
         question: `How do you ensure that your websites not only look impressive but also perform well?`,
-        answer: `I emphasize performance optimization and enhancing the overall user experience. This ensures that the websites operate smoothly, providing users with a positive and seamless interaction.`
+        answer: `I emphasize performance optimization and enhancing the overall user experience. This ensures 
+        that the websites operate smoothly, providing users with a positive and seamless interaction.`
     },
     {
         id: 6,
         question: `Do you stay updated on the latest trends in web development?`,
-        answer: `I am always learning and staying updated on the latest trends in web development to ensure that I bring the most current and effective solutions to my projects.`
+        answer: `I am always learning and staying updated on the latest trends in web development to ensure 
+        that I bring the most current and effective solutions to my projects.`
     },
 ];
 
@@ -85,27 +91,27 @@ export default function Faq() {
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // TOGGLE EVENT FOR ANSWERS FOR QUESTIONS
     const toggleEvent = (event: React.MouseEvent): void => {
-        const TARGET = event.target as HTMLElement;
-        const PARENT = TARGET?.closest(`.question`);
-        const TOGGLE_CONTAINER = PARENT?.querySelector('.toggle-container') as HTMLElement;
+        const target = event.target as HTMLElement;
+        const parent = target?.closest(`.question`);
+        const toggleContainer = parent?.querySelector('.toggle-container') as HTMLElement;
 
-        if (PARENT && TOGGLE_CONTAINER && !PARENT.classList.contains('animating')) {
-            const ARROW = PARENT?.querySelector(`.arrow`);
-            const HEADER_LINE = PARENT.querySelector(`.header-line`)!;
+        if (parent && toggleContainer && !parent.classList.contains('animating')) {
+            const ARROW = parent?.querySelector(`.arrow`);
+            const HEADER_LINE = parent.querySelector(`.header-line`)!;
 
             let timeoutTime = 700;
 
-            slideToggle(TOGGLE_CONTAINER);
+            slideToggle(toggleContainer);
 
             if (ARROW) {
                 ARROW.classList.toggle(`arrow-active`);
             }
 
             HEADER_LINE.classList.toggle('padding');
-            PARENT.classList.add('animating');
+            parent.classList.add('animating');
 
             setTimeout(() => {
-                PARENT.classList.remove('animating');
+                parent.classList.remove('animating');
             }, timeoutTime);
         }
     };
@@ -115,7 +121,7 @@ export default function Faq() {
             <Header />
             <div className={classes['inner-container']}>
                 <div onClick={toggleEvent} className={classes.questions}>
-                    {questions.map((el, i) => {
+                    {QUESTIONS.map((el, i) => {
                         return (
                             <Question
                                 key={el.id}

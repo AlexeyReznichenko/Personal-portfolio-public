@@ -107,42 +107,11 @@ export default function Home() {
 
             if (WINDOW_WIDTH > 850) {
 
-                // timeline
-                // .add('section-1-animation')
-                // .to(`.${classesSection1['section-1']}`, {duration: 1, backgroundColor: '#141319', ease: Power0.easeIn}, 'section-1-animation')
-                // .to(`.${classesSection1.title}`, {duration: 1, x: -2 * BASE_FONT_SIZE, ease: Power0.easeIn}, 'section-1-animation')
-                // .from(`.${classesSection1.description}`, {duration: 1, y: 15 * BASE_FONT_SIZE, scale: .8, ease: Power0.easeIn}, 'section-1-animation')
-                // .to(`.${classesSection1.dollar} img`, {duration: 1, x: 43 * BASE_FONT_SIZE, y: -10 * BASE_FONT_SIZE, scale: 1.6, rotate: 14, ease: Power0.easeIn}, 'section-1-animation')
-                // .to(`.${classesSection1.stands} .${classesSection1.inner}`, {duration: 1, y: 5 * BASE_FONT_SIZE, scale: 1.2, ease: Power0.easeIn}, 'section-1-animation')
-                // .fromTo(`.${classesSection1.stands} .${classesSection1.inner}`, 
-                //     {duration: 1, filter: 'brightness(90%)'},
-                //     {duration: 1, filter: 'brightness(140%)'},
-                // 'section-1-animation')
-                // .from(`.${classesSection1['orange-stick-1']}`, {duration: 1, x: -23 * BASE_FONT_SIZE, y: 23 * BASE_FONT_SIZE, rotate: 67, ease: Power0.easeIn}, 'section-1-animation')
-                // .from(`.${classesSection1['orange-stick-2']}`, {duration: 1, x: -23 * BASE_FONT_SIZE, y: 23 * BASE_FONT_SIZE, rotate: 58, ease: Power0.easeIn}, 'section-1-animation')
-                // .from(`.${classesSection1['green-stick-1']}`, {duration: 1, x: -23 * BASE_FONT_SIZE, y: 23 * BASE_FONT_SIZE, rotate: -80, ease: Power0.easeIn}, 'section-1-animation')
-                // .from(`.${classesSection1['orange-stick-3']}`, {duration: 1, x: -23 * BASE_FONT_SIZE, y: -23 * BASE_FONT_SIZE, rotate: 53, ease: Power0.easeIn}, 'section-1-animation')
-                // .from(`.${classesSection1['green-stick-2']}`, {duration: 1, x: 23 * BASE_FONT_SIZE, y: -23 * BASE_FONT_SIZE, rotate: 63, ease: Power0.easeIn}, 'section-1-animation')
-                // .from(`.${classesSection1['orange-stick-4']}`, {duration: 1, x: 23 * BASE_FONT_SIZE, y: 23 * BASE_FONT_SIZE, rotate: 46, ease: Power0.easeIn}, 'section-1-animation')
-                // .from(`.${classesSection1['orange-stick-5']}`, {duration: 1, x: 23 * BASE_FONT_SIZE, y: 23 * BASE_FONT_SIZE, rotate: 75, ease: Power0.easeIn}, 'section-1-animation')
-                // .to(`.${classesSection1['shadow-bottom']}`, {duration: 1, y: 10 * BASE_FONT_SIZE, ease: Power0.easeIn}, 'section-1-animation')
-
-                // .add('section-2-animation')
-                // .from(`.${classesSection2['section-2']}`, {duration: 1.2, y: 110 * VH, ease: Power0.easeIn}, 'section-2-animation+=.35')
-                // .from(`.${classesSection2['orange-stick-1']}`, {duration: 1.2, x: 60 * BASE_FONT_SIZE, y: 10 * BASE_FONT_SIZE, rotate: -40, ease: Power0.easeIn}, 'section-2-animation+=.35')
-                // .from(`.${classesSection2['green-stick-1']}`, {duration: 1.2, x: 60 * BASE_FONT_SIZE, y: 10 * BASE_FONT_SIZE, rotate: -14, ease: Power0.easeIn}, 'section-2-animation+=.35')
-                // .to(`.${classesSection1.title}`, {duration: 1.2, y: -120 * VH, ease: Power0.easeIn}, 'section-2-animation+=.35')
-                // .to(`.${classesSection1.description}`, {duration: 1.2, y: -103 * VH, ease: Power0.easeIn}, 'section-2-animation+=.35')
-                // .to(`.${classesSection1.dollar}`, {duration: 1.2, x: 60 * BASE_FONT_SIZE, y: 40 * VH, rotate: 70, ease: Power0.easeIn}, 'section-2-animation+=.35')
-                // .to(`.${classesSection1['orange-stick-3']}`, {duration: 1.2, y: -29 * BASE_FONT_SIZE, ease: Power0.easeIn}, 'section-2-animation+=.35')
-                // .to(`.${classesSection1['green-stick-2']}`, {duration: 1.2, y: -29 * BASE_FONT_SIZE, ease: Power0.easeIn}, 'section-2-animation+=.35')
-
                 timeline
                 .add('section-1-animation')
                 .to(`.${classesSection1['section-1']}`, {duration: 0, backgroundColor: '#141319', ease: Power0.easeIn}, 'section-1-animation')
                 .to(`.${classesSection1.title}`, {duration: 0, x: -2 * BASE_FONT_SIZE, ease: Power0.easeIn}, 'section-1-animation')
                 .from(`.${classesSection1.description}`, {duration: 0, y: 15 * BASE_FONT_SIZE, scale: .8, ease: Power0.easeIn}, 'section-1-animation')
-                // .to(`.${classesSection1.dollar} img`, {duration: 0, x: 43 * BASE_FONT_SIZE, y: -10 * BASE_FONT_SIZE, scale: 1.6, rotate: 14, ease: Power0.easeIn}, 'section-1-animation')
                 .to(`.${classesSection1.stands} .${classesSection1.inner}`, {duration: 0, y: 5 * BASE_FONT_SIZE, scale: 1.2, ease: Power0.easeIn}, 'section-1-animation')
                 .fromTo(`.${classesSection1.stands} .${classesSection1.inner}`, 
                     {duration: 0, filter: 'brightness(90%)'},
@@ -198,7 +167,6 @@ export default function Home() {
                     {duration: .9, rotate: 238}, 
                     {duration: .9, rotate: 270}, 
                 'section-3-animation-2')
-                // .from(`.${classesSection3.shadow}`, {duration: .9, opacity: 0, ease: Power0.easeIn}, 'section-3-animation-2')
                 .from(`.${classesSection3['orange-stick-1']}`, {duration: .9, x: -50 * BASE_FONT_SIZE, y: 50 * BASE_FONT_SIZE, rotate: -70, ease: Power0.easeIn}, 'section-3-animation-2')
                 .from(`.${classesSection3['green-stick-1']}`, {duration: .9, x: -50 * BASE_FONT_SIZE, y: 50 * BASE_FONT_SIZE, rotate: -53, ease: Power0.easeIn}, 'section-3-animation-2')
                 .from(`.${classesSection3['green-stick-2']}`, {duration: .9, x: -50 * BASE_FONT_SIZE, y: -50 * BASE_FONT_SIZE, rotate: 43, ease: Power0.easeIn}, 'section-3-animation-2')
@@ -208,7 +176,6 @@ export default function Home() {
                 .add('section-3-animation-3')
                 .to(`.${classesSection3.watch} .${classesSection3.inner}`, {duration: .8, scale: 1, ease: Power0.easeIn}, 'section-3-animation-3')
                 .to(`.${classesSection3.watch}`, {duration: .8, top: '25%', ease: Power0.easeIn}, 'section-3-animation-3')
-                // .to(`.${classesSection3.shadow}`, {duration: .8, opacity: 0, ease: Power0.easeIn}, 'section-3-animation-3')
                 .from(`.${classesSection3.info}`, {duration: .8, y: 100 * VH, ease: Power0.easeIn}, 'section-3-animation-3')
                 .to(`.${classesSection3['orange-stick-1']}`, {duration: .8, x: -20 * BASE_FONT_SIZE, y: -100 * BASE_FONT_SIZE, rotate: 15, ease: Power0.easeIn}, 'section-3-animation-3')
                 .to(`.${classesSection3['green-stick-1']}`, {duration: .8, x: -10 * BASE_FONT_SIZE, y: -90 * VH, rotate: 56, ease: Power0.easeIn}, 'section-3-animation-3')
@@ -247,35 +214,10 @@ export default function Home() {
 
             } else {
 
-                // timeline
-                // .add('section-1-animation')
-                // .to(`.${classesSection1['section-1']}`, {duration: 1, backgroundColor: '#141319', ease: 'linear'}, 'section-1-animation')
-                // .from(`.${classesSection1.description}`, {duration: 1, y: 80 * VH, scale: .8, ease: 'linear'}, 'section-1-animation')
-                // // .to(`.${classesSection1.dollar} img`, {duration: 1, x: 27 * BASE_FONT_SIZE, y: 1 * BASE_FONT_SIZE, scale: 1.8, rotate: 14, ease: 'linear'}, 'section-1-animation')
-                // .to(`.${classesSection1.dollar} img`, {duration: 1, x: 37 * BASE_FONT_SIZE, y: 4 * BASE_FONT_SIZE, scale: 1.8, rotate: 14, ease: 'linear'}, 'section-1-animation')
-                // .to(`.${classesSection1.stands} .${classesSection1.inner}`, {duration: 1, y: 15 * BASE_FONT_SIZE, scale: 1.2, ease: 'linear'}, 'section-1-animation')
-                // .fromTo(`.${classesSection1.stands} .${classesSection1.inner}`, 
-                //     {duration: 1, filter: 'brightness(90%)'},
-                //     {duration: 1, filter: 'brightness(140%)'},
-                // 'section-1-animation')
-                // .from(`.${classesSection1['orange-stick-1']}`, {duration: 1, x: -23 * BASE_FONT_SIZE, y: 45 * BASE_FONT_SIZE, rotate: 63, ease: 'linear'}, 'section-1-animation')
-                // .from(`.${classesSection1['green-stick-1']}`, {duration: 1, x: -23 * BASE_FONT_SIZE, y: 23 * BASE_FONT_SIZE, rotate: -80, ease: 'linear'}, 'section-1-animation')
-                // .from(`.${classesSection1['orange-stick-3']}`, {duration: 1, x: -23 * BASE_FONT_SIZE, y: -23 * BASE_FONT_SIZE, rotate: 53, ease: 'linear'}, 'section-1-animation')
-                // .from(`.${classesSection1['green-stick-2']}`, {duration: 1, x: 23 * BASE_FONT_SIZE, y: -23 * BASE_FONT_SIZE, rotate: 63, ease: 'linear'}, 'section-1-animation')
-
-                // .add('section-2-animation')
-                // .from(`.${classesSection2['section-2']}`, {duration: 1.2, y: 120 * VH, ease: 'linear'}, 'section-2-animation+=.35')
-                // .from(`.${classesSection2['orange-stick-1']}`, {duration: 1.2, x: 60 * BASE_FONT_SIZE, y: 10 * BASE_FONT_SIZE, rotate: -40, ease: 'linear'}, 'section-2-animation+=.15')
-                // .from(`.${classesSection2['green-stick-1']}`, {duration: 1.2, x: 60 * BASE_FONT_SIZE, y: 10 * BASE_FONT_SIZE, rotate: -14, ease: 'linear'}, 'section-2-animation+=.15')
-                // .to(`.${classesSection1.info}`, {duration: 1.2, y: -60 * VH, ease: 'linear'}, 'section-2-animation+=.15')
-                // .to(`.${classesSection1['orange-stick-3']}`, {duration: 1.2, y: -29 * BASE_FONT_SIZE, ease: 'linear'}, 'section-2-animation+=.15')
-                // .to(`.${classesSection1['green-stick-2']}`, {duration: 1.2, y: -29 * BASE_FONT_SIZE, ease: 'linear'}, 'section-2-animation+=.15')
-
                 timeline
                 .add('section-1-animation')
                 .to(`.${classesSection1['section-1']}`, {duration: 0, backgroundColor: '#141319', ease: 'linear'}, 'section-1-animation')
                 .from(`.${classesSection1.description}`, {duration: 0, y: 80 * VH, scale: .8, ease: 'linear'}, 'section-1-animation')
-                // .to(`.${classesSection1.dollar} img`, {duration: 0, x: 37 * BASE_FONT_SIZE, y: 4 * BASE_FONT_SIZE, scale: 1.8, rotate: 14, ease: 'linear'}, 'section-1-animation')
                 .to(`.${classesSection1.stands} .${classesSection1.inner}`, {duration: 0, y: 15 * BASE_FONT_SIZE, scale: 1.2, ease: 'linear'}, 'section-1-animation')
                 .fromTo(`.${classesSection1.stands} .${classesSection1.inner}`, 
                     {duration: 0, filter: 'brightness(90%)'},
@@ -325,12 +267,10 @@ export default function Home() {
                     {duration: .9, rotate: 238}, 
                     {duration: .9, rotate: 270}, 
                 'section-3-animation-2')
-                // .from(`.${classesSection3.shadow}`, {duration: .9, opacity: 0, ease: 'linear'}, 'section-3-animation-2')
 
                 .add('section-3-animation-3')
                 .to(`.${classesSection3.watch} .${classesSection3.inner}`, {duration: .8, scale: .9, ease: 'linear'}, 'section-3-animation-3')
                 .to(`.${classesSection3.watch}`, {duration: .8, top: '28%', ease: 'linear'}, 'section-3-animation-3')
-                // .to(`.${classesSection3.shadow}`, {duration: .8, opacity: 0, ease: 'linear'}, 'section-3-animation-3')
                 .from(`.${classesSection3.info}`, {duration: .8, y: 100 * VH, ease: 'linear'}, 'section-3-animation-3')
                 .from(`.${classesSection3['orange-stick-1']}`, {duration: .8, x: 50 * BASE_FONT_SIZE, y: 40 * BASE_FONT_SIZE, rotate: 60, ease: 'linear'}, 'section-3-animation-3')
                 .from(`.${classesSection3['orange-stick-2']}`, {duration: .8, x: -30 * BASE_FONT_SIZE, y: -40 * BASE_FONT_SIZE, rotate: 50, ease: 'linear'}, 'section-3-animation-3')

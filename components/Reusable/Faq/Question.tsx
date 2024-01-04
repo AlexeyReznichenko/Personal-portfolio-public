@@ -1,5 +1,4 @@
 import classes from '@/styles/componentsStyles/Faq/question.module.scss';
-import { useState } from 'react';
 
 interface Props {
     question: string;
@@ -9,9 +8,7 @@ interface Props {
     answerListYears?: string[];
 }
 
-export default function Question({ question, answer, answerList, answerListSkills, answerListYears }: Props) {
-
-
+export default function Question({ question, answer, answerListSkills, answerListYears }: Props) {
 
     return (
         <div className={`${classes.question} question`}>
@@ -37,13 +34,6 @@ export default function Question({ question, answer, answerList, answerListSkill
                         })}
                     </ul>
                 </div>}
-                {/* {answerList && <ul className={`${classes.answer} ${classes.list}`}>
-                    {answerList.map(el => {
-                        return (
-                            <li className={classes.item}>{el}</li>
-                        )
-                    })}
-                </ul>} */}
             </div>
         </div>
     )

@@ -8,7 +8,6 @@ export default function Section3() {
                 <div className={classes.watch}>
                     <div className={classes.inner}>
                         <img src="/static/img/Landing/watch.png" alt="" />
-                        {/* <div className={classes.shadow}></div> */}
                         <img src="/static/svg/Landing/watchArrow.svg" alt="" className={`${classes.arrow} ${classes['arrow-minutes']}`} />
                         <img src="/static/svg/Landing/watchArrow.svg" alt="" className={`${classes.arrow} ${classes['arrow-hours']}`} />
                     </div>

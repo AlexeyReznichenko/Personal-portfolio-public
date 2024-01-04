@@ -3,7 +3,7 @@ import { baseActions, selectIsNavigationLinkAboutClicked, selectIsNavigationLink
 import classes from '@/styles/componentsStyles/App/header.module.scss';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import NavigationMenu from './NavigationMenu';
 import Navigation from './Navigation';
@@ -52,34 +52,50 @@ export default function Header() {
             if (window.innerWidth < 850) {
                 const PROJECT_BASE_VALUE = 3160;
                 const PROJECT_SCROLL_VALUE = 535;
-                if (type === 'portfolio') {
-                    scrollTo(0, PROJECT_BASE_VALUE);
-                } else if (type === 'about') {
-                    scrollTo(0, 560);
-                } else if (type === 'sms') {
-                    scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 1));
-                } else if (type === 'invicta') {
-                    scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 3));
-                } else if (type === 'earngames') {
-                    scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 5));
+
+                switch (type) {
+                    case 'portfolio':
+                        scrollTo(0, PROJECT_BASE_VALUE);
+                        break;
+                    case 'about':
+                        scrollTo(0, 560);
+                        break;
+                    case 'sms':
+                        scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 1));
+                        break;
+                    case 'invicta':
+                        scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 3));
+                        break;
+                    case 'earngames':
+                        scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 5));
+                        break;
                 }
+
                 return;
             }
 
             if (window.innerWidth > 850 && isTouchDevice()) {
                 const PROJECT_BASE_VALUE = 3220;
                 const PROJECT_SCROLL_VALUE = 530;
-                if (type === 'portfolio') {
-                    scrollTo(0, PROJECT_BASE_VALUE);
-                } else if (type === 'about') {
-                    scrollTo(0, 540);
-                } else if (type === 'sms') {
-                    scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 1));
-                } else if (type === 'invicta') {
-                    scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 3));
-                } else if (type === 'earngames') {
-                    scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 5));
+
+                switch (type) {
+                    case 'portfolio':
+                        scrollTo(0, PROJECT_BASE_VALUE);
+                        break;
+                    case 'about':
+                        scrollTo(0, 540);
+                        break;
+                    case 'sms':
+                        scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 1));
+                        break;
+                    case 'invicta':
+                        scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 3));
+                        break;
+                    case 'earngames':
+                        scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 5));
+                        break;
                 }
+
                 return;
             }
 
@@ -87,17 +103,25 @@ export default function Header() {
                 const PROJECT_BASE_VALUE = .327;
                 const PROJECT_SCROLL_VALUE = .0535;
                 const PIN_SPACER_HEIGHT = pinSpacer.clientHeight;
-                if (type === 'portfolio') {
-                    scrollTo(0, PIN_SPACER_HEIGHT * PROJECT_BASE_VALUE);
-                } else if (type === 'about') {
-                    scrollTo(0, PIN_SPACER_HEIGHT * .0545);
-                } else if (type === 'sms') {
-                    scrollTo(0, PIN_SPACER_HEIGHT * (PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 1)));
-                } else if (type === 'invicta') {
-                    scrollTo(0, PIN_SPACER_HEIGHT * (PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 3)));
-                } else if (type === 'earngames') {
-                    scrollTo(0, PIN_SPACER_HEIGHT * (PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 5)));
+
+                switch (type) {
+                    case 'portfolio':
+                        scrollTo(0, PIN_SPACER_HEIGHT * PROJECT_BASE_VALUE);
+                        break;
+                    case 'about':
+                        scrollTo(0, PIN_SPACER_HEIGHT * .0545);
+                        break;
+                    case 'sms':
+                        scrollTo(0, PIN_SPACER_HEIGHT * (PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 1)));
+                        break;
+                    case 'invicta':
+                        scrollTo(0, PIN_SPACER_HEIGHT * (PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 3)));
+                        break;
+                    case 'earngames':
+                        scrollTo(0, PIN_SPACER_HEIGHT * (PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 5)));
+                        break;
                 }
+
                 return;
             }
         } else {
@@ -161,9 +185,6 @@ export default function Header() {
                     />
                 </div>
                 <div className={classes.right}>
-                    {/* <a href='https://t.me/aleksys228' target='_blank' className={classes.button}>
-                        <div className={classes.inner}>Contact</div>
-                    </a> */}
                     <a href='https://www.linkedin.com/in/oleksiireznichenko' target='_blank' className={classes.button}>
                         <div className={classes.inner}>LinkedIn</div>
                     </a>

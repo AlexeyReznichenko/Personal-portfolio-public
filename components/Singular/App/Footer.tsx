@@ -1,7 +1,6 @@
 import classes from '@/styles/componentsStyles/App/footer.module.scss';
 import Link from 'next/link';
 
-
 export default function Footer() {
 
     return (

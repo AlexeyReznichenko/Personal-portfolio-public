@@ -64,7 +64,6 @@ export default function Section1() {
             <div className={`${classes['green-stick-2']} ${classes.stick}`}>
                 <img src="/static/img/Landing/greenStick.png" alt="" />
             </div>
-            {/* <div className={classes['shadow-bottom']}></div> */}
         </section>
     )
 }

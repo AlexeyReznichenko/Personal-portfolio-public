@@ -4,7 +4,6 @@ import { gsap } from 'gsap';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-
 export default function Preloader() {
     const dispatch = useDispatch();
     const preloaderTimeline = gsap.timeline({});
@@ -30,12 +29,12 @@ export default function Preloader() {
     };
 
     useEffect(() => {
-        const HTML = document.querySelector('html')!;
-        HTML.style.overflowY = 'hidden';
+        const html = document.querySelector('html')!;
+        html.style.overflowY = 'hidden';
         initAnimation();
 
         setTimeout(() => {
-            HTML.style.overflowY = 'hidden';
+            html.style.overflowY = 'hidden';
         }, 100);
 
         setTimeout(() => {

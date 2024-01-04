@@ -4,7 +4,6 @@ import '@/styles/mixins.scss'
 import '@/styles/globals.scss'
 import '@/styles/shared.scss'
 import Script from 'next/script'
-import { useEffect } from 'react'
 import { ReduxProvider } from '@/store/provider';
 
 export default function RootLayout({
