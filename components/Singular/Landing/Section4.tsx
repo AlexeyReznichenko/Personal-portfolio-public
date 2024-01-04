@@ -137,6 +137,7 @@ export default function Section4() {
                             {PROJECTS.map((_, index, arr) => {
                                 return (
                                     <span 
+                                     key={index + 'index'}
                                      className={`
                                       ${classes.index} 
                                       ${index + 1 !== arr.length ? classes['index-to-top'] : ''} 
@@ -152,6 +153,7 @@ export default function Section4() {
                                 {PROJECTS.map((el, index, arr) => {
                                     return (
                                         <h2 
+                                         key={index + 'title'}
                                          className={`
                                           ${classes.title} 
                                           ${index + 1 !== arr.length ? classes['title-to-top'] : ''}  
@@ -167,7 +169,7 @@ export default function Section4() {
                             {PROJECTS.map((el, index, arr) => {
                                 return (
                                     <ButtonProject 
-                                        key={el.id}
+                                        key={el.id + 'button'}
                                         index={index}
                                         projectsAmount={arr.length}
                                     />

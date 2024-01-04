@@ -20,16 +20,24 @@ export default function Question({ question, answer, answerListSkills, answerLis
                 {answer && <p className={classes.answer}>{answer}</p>}
                 {answerListSkills && answerListYears && <div className={`${classes.answer} ${classes['flex-container']}`}>
                     <ul className={`${classes.list} ${classes.skills}`}>
-                        {answerListSkills.map(el => {
+                        {answerListSkills.map((el, index) => {
                             return (
-                                <li className={classes.item}>{el}</li>
+                                <li 
+                                 key={index + 'skills'}
+                                 className={classes.item}>
+                                    {el}
+                                </li>
                             )
                         })}
                     </ul>
                     <ul className={`${classes.list}`}>
-                        {answerListYears.map(el => {
+                        {answerListYears.map((el, index) => {
                             return (
-                                <li className={classes.item}>{el}</li>
+                                <li 
+                                 key={index + 'years'}
+                                 className={classes.item}>
+                                    {el}
+                                </li>
                             )
                         })}
                     </ul>

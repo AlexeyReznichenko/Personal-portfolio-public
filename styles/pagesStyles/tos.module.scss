@@ -2,11 +2,11 @@
 
 .page-tos {
     position: relative;
-    padding-top: 19rem;
+    padding-top: 12rem;
     padding-bottom: 4rem;
 
     @media only screen and (max-width: 850px) {
-      padding-top: 100px;
+      padding-top: 120px;
       padding-bottom: 100px;
     }
 
@@ -20,6 +20,10 @@
     .center {
         width: 85rem;
         margin: 0 auto;
+
+        @media only screen and (max-width: 850px) {
+            width: 100%;
+        }
     }
 
     .title {

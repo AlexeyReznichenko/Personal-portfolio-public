@@ -96,18 +96,18 @@ export default function Faq() {
         const toggleContainer = parent?.querySelector('.toggle-container') as HTMLElement;
 
         if (parent && toggleContainer && !parent.classList.contains('animating')) {
-            const ARROW = parent?.querySelector(`.arrow`);
-            const HEADER_LINE = parent.querySelector(`.header-line`)!;
+            const arrow = parent?.querySelector(`.arrow`);
+            const headerLine = parent.querySelector(`.header-line`)!;
 
             let timeoutTime = 700;
 
             slideToggle(toggleContainer);
 
-            if (ARROW) {
-                ARROW.classList.toggle(`arrow-active`);
+            if (arrow) {
+                arrow.classList.toggle(`arrow-active`);
             }
 
-            HEADER_LINE.classList.toggle('padding');
+            headerLine.classList.toggle('padding');
             parent.classList.add('animating');
 
             setTimeout(() => {

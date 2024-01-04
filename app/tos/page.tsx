@@ -74,7 +74,7 @@ export default function Tos() {
                     <div className={classes['info-blocks']}>
                         {INFO_BLOCKS.map((el, index) => {
                             return (
-                                <div className={classes['info-block']}>
+                                <div key={el.id + 'block'} className={classes['info-block']}>
                                     <span className={classes.subtitle}>{index + 1}. {el.title}</span>
                                     <p className={classes.description}>{el.description}</p>
                                 </div>

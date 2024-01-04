@@ -198,7 +198,7 @@ export default function Home() {
                 .to(`.${classesProject['project-to-top']}`, {duration: 1, stagger: 1.2, delay: .25, y: -110 * VH, ease: Power0.easeIn}, 'section-4-animation')
                 .to(`.${classesProject['project-to-top']} .${classesProject.cover}`, {duration: 1, stagger: 1.2, delay: .25, height: 26 * BASE_FONT_SIZE, ease: Power0.easeIn}, 'section-4-animation')
                 .to(`.${classesProject['project-to-top']} .${classesProject.info}`, {duration: 1, stagger: 1.2, delay: .25, y: -30 * BASE_FONT_SIZE, ease: Power0.easeIn}, 'section-4-animation')
-                .to(`.${classesSection4['title-to-top']}`, {duration: 1, stagger: 1.2, delay: .25, y: 18 * BASE_FONT_SIZE, textShadow: '0px 0px 0px rgba(0, 0, 0, 0)', ease: Power0.easeIn}, 'section-4-animation')
+                .to(`.${classesSection4['title-to-top']}`, {duration: 1, stagger: 1.2, delay: .25, y: 20 * BASE_FONT_SIZE, textShadow: '0px 0px 0px rgba(0, 0, 0, 0)', ease: Power0.easeIn}, 'section-4-animation')
                 .to(`.${classesSection4['index-to-top']}`, {duration: 1, stagger: 1.2, delay: .25, autoAlpha: 0, ease: Power0.easeIn}, 'section-4-animation')
                 .to(`.${classesButtonProject['button-project-to-top']}`, {duration: 1, stagger: 1.2, delay: .25, height: 5, backgroundColor: '#2D2D2D', width: '80%', ease: Power0.easeIn}, 'section-4-animation')
                 .from(`.${classesProject['project-from-bottom']}`, {duration: 1, stagger: 1.2, delay: .2, y: 110 * VH, ease: Power0.easeIn}, 'section-4-animation')
@@ -208,7 +208,7 @@ export default function Home() {
                     {duration: .8, delay: .4, stagger: 1.2, filter: 'brightness(20%) blur(5px) grayscale(1)'},
                     {duration: .8, delay: .4, stagger: 1.2, filter: 'brightness(100%) blur(0px) grayscale(0)'},
                 'section-4-animation')
-                .from(`.${classesSection4['title-from-bottom']}`, {duration: 1, stagger: 1.2, delay: .2, y: -18 * BASE_FONT_SIZE, textShadow: '0px 0px 0px rgba(0, 0, 0, 0)', ease: Power0.easeIn}, 'section-4-animation')
+                .from(`.${classesSection4['title-from-bottom']}`, {duration: 1, stagger: 1.2, delay: .2, y: -20 * BASE_FONT_SIZE, textShadow: '0px 0px 0px rgba(0, 0, 0, 0)', ease: Power0.easeIn}, 'section-4-animation')
                 .from(`.${classesSection4['index-from-bottom']}`, {duration: 1, stagger: 1.2, delay: .2, autoAlpha: 0, ease: Power0.easeIn}, 'section-4-animation')
                 .to(`.${classesButtonProject['button-project']}`, {duration: 1, stagger: 1.2, delay: .2, height: 6, backgroundColor: '#D9D9D9', width: '100%', ease: Power0.easeIn}, 'section-4-animation-=1.2')
 
@@ -294,7 +294,7 @@ export default function Home() {
                     {duration: .8, delay: .2, stagger: 1.15, filter: 'brightness(100%) grayscale(0)'},
                     {duration: .8, delay: .2, stagger: 1.15, filter: 'brightness(20%) grayscale(1)'},
                 'section-4-animation')
-                .to(`.${classesSection4['title-to-top']}`, {duration: 1, stagger: 1.15, delay: .2, y: 120, textShadow: '0px 0px 0px rgba(0, 0, 0, 0)', ease: Power0.easeIn}, 'section-4-animation')
+                .to(`.${classesSection4['title-to-top']}`, {duration: 1, stagger: 1.15, delay: .2, y: 130, textShadow: '0px 0px 0px rgba(0, 0, 0, 0)', ease: Power0.easeIn}, 'section-4-animation')
                 .to(`.${classesSection4['index-to-top']}`, {duration: 1, stagger: 1.15, delay: .2, autoAlpha: 0, ease: Power0.easeIn}, 'section-4-animation')
                 .to(`.${classesButtonProject['button-project-to-top']}`, {duration: 1, stagger: 1.15, delay: .2, height: 5, backgroundColor: '#2D2D2D', width: '80%', ease: Power0.easeIn}, 'section-4-animation')
                 .from(`.${classesProject['project-from-bottom']}`, {duration: 1, stagger: 1.15, delay: .15, y: 110 * VH, ease: Power0.easeIn}, 'section-4-animation')
@@ -304,7 +304,7 @@ export default function Home() {
                     {duration: .8, delay: .35, stagger: 1.15, filter: 'brightness(20%) blur(0px) grayscale(1)'},
                     {duration: .8, delay: .35, stagger: 1.15, filter: 'brightness(100%) blur(0px) grayscale(0)'},
                 'section-4-animation')
-                .from(`.${classesSection4['title-from-bottom']}`, {duration: 1, stagger: 1.15, delay: .15, y: -120, textShadow: '0px 0px 0px rgba(0, 0, 0, 0)', ease: Power0.easeIn}, 'section-4-animation')
+                .from(`.${classesSection4['title-from-bottom']}`, {duration: 1, stagger: 1.15, delay: .15, y: -130, textShadow: '0px 0px 0px rgba(0, 0, 0, 0)', ease: Power0.easeIn}, 'section-4-animation')
                 .from(`.${classesSection4['index-from-bottom']}`, {duration: 1, stagger: 1.15, delay: .15, autoAlpha: 0, ease: Power0.easeIn}, 'section-4-animation')
                 .to(`.${classesButtonProject['button-project']}`, {duration: 1, stagger: 1.15, delay: .15, height: 6, backgroundColor: '#D9D9D9', width: '100%', ease: Power0.easeIn}, 'section-4-animation-=1.2')
 
